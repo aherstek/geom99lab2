@@ -56,31 +56,31 @@
     url: "https://services1.arcgis.com/pMeXRvgWClLJZr3s/arcgis/rest/services/point_and_polyline_data/FeatureServer/1"
   });
 
-  map.add(rollerLayer, 0);
+  map.add(rollerLayer, 1);
 
       const metLayer = new FeatureLayer({
     url: "https://services1.arcgis.com/pMeXRvgWClLJZr3s/arcgis/rest/services/where_we_met_/FeatureServer/0"
   });
 
-  map.add(metLayer, 0);
+  map.add(metLayer);
 
       const firstLayer = new FeatureLayer({
     url: "https://services1.arcgis.com/pMeXRvgWClLJZr3s/arcgis/rest/services/our_first_date/FeatureServer/0"
   });
 
-  map.add(firstLayer, 0);
+  map.add(firstLayer);
 
       const secondLayer = new FeatureLayer({
     url: "https://services1.arcgis.com/pMeXRvgWClLJZr3s/arcgis/rest/services/second_date/FeatureServer/0"
   });
 
-  map.add(secondLayer, 0);
+  map.add(secondLayer);
 
       const squashLayer = new FeatureLayer({
     url: "https://services1.arcgis.com/pMeXRvgWClLJZr3s/arcgis/rest/services/our_go_to_squash_court/FeatureServer/0"
   });
 
-  map.add(squashLayer, 0);
+  map.add(squashLayer);
 
 
   });
