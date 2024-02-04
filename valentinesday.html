@@ -18,9 +18,6 @@
     <script src="https://js.arcgis.com/4.28/"></script>
     <script>
       require(["esri/Map", "esri/views/MapView"], (Map, MapView) => {
-         const customLayer = new TileLayer({
-          url: "https://fleming.maps.arcgis.com/home/item.html?id=2ea2c88769454831af811c002b98af51"
-        });
         const map = new Map({
           basemap: "topo-vector"
         });
