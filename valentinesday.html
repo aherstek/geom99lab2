@@ -37,26 +37,51 @@
     zoom: 12,
   });
 
-//Trailheads feature layer (points)
+//parks feature layer (points)
   const faveparksLayer = new FeatureLayer({
     url: "https://services1.arcgis.com/pMeXRvgWClLJZr3s/arcgis/rest/services/some_of_our_fave_parks/FeatureServer/0"
   });
 
   map.add(faveparksLayer);
 
-//Trails feature layer (lines)
-  const trailsLayer = new FeatureLayer({
-    url: "https://services3.arcgis.com/GVgbJbqm8hXASVYi/arcgis/rest/services/Trails/FeatureServer/0"
+//bike feature layer (lines)
+  const bikeLayer = new FeatureLayer({
+    url: "https://services1.arcgis.com/pMeXRvgWClLJZr3s/arcgis/rest/services/our_go_to_bike_route/FeatureServer/0"
   });
 
-  map.add(trailsLayer, 0);
+  map.add(bikeLayer, 0);
 
-// Parks and open spaces (polygons)
-  const parksLayer = new FeatureLayer({
-    url: "https://services3.arcgis.com/GVgbJbqm8hXASVYi/arcgis/rest/services/Parks_and_Open_Space/FeatureServer/0"
+// rollerblade (lines)
+  const rollerLayer = new FeatureLayer({
+    url: "https://services1.arcgis.com/pMeXRvgWClLJZr3s/arcgis/rest/services/point_and_polyline_data/FeatureServer/1"
   });
 
-  map.add(parksLayer, 0);
+  map.add(rollerLayer, 0);
+
+      const metLayer = new FeatureLayer({
+    url: "https://services1.arcgis.com/pMeXRvgWClLJZr3s/arcgis/rest/services/where_we_met_/FeatureServer/0"
+  });
+
+  map.add(metLayer, 0);
+
+      const firstLayer = new FeatureLayer({
+    url: "https://services1.arcgis.com/pMeXRvgWClLJZr3s/arcgis/rest/services/our_first_date/FeatureServer/0"
+  });
+
+  map.add(firstLayer, 0);
+
+      const secondLayer = new FeatureLayer({
+    url: "https://services1.arcgis.com/pMeXRvgWClLJZr3s/arcgis/rest/services/second_date/FeatureServer/0"
+  });
+
+  map.add(secondLayer, 0);
+
+      const squashLayer = new FeatureLayer({
+    url: "https://services1.arcgis.com/pMeXRvgWClLJZr3s/arcgis/rest/services/our_go_to_squash_court/FeatureServer/0"
+  });
+
+  map.add(squashLayer, 0);
+
 
   });
 </script>
