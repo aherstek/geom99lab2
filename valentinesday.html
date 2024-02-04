@@ -19,7 +19,7 @@
     <script>
       require(["esri/Map", "esri/views/MapView"], (Map, MapView) => {
          const customLayer = new TileLayer({
-          url: "https://fleming.maps.arcgis.com/home/item.html?id=2ea2c88769454831af811c002b98af51#overview"
+          url: "https://fleming.maps.arcgis.com/home/item.html?id=2ea2c88769454831af811c002b98af51"
         });
         const map = new Map({
           basemap: "topo-vector"
@@ -28,7 +28,7 @@
           container: "viewDiv", // Reference to the view div created in step 5
           map: map, // Reference to the map object created before the view
           zoom: 6, // Sets zoom level based on level of detail (LOD)
-          center: [114, 51] // Sets center point of view using longitude,latitude
+          center: [51, 114] // Sets center point of view using longitude,latitude
         });
       });
     </script>
