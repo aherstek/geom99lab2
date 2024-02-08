@@ -169,10 +169,19 @@
         font: {
           size: 10,
           weight: "bold"
+          }
         }
-      }
-    }]
-  });
+    }],
+    renderer: {
+        type: "simple", // You can also use "unique-value" or "class-breaks" for more complex rendering
+        symbol: {
+            type: "simple-marker",
+            color: "blue", // Change the color here
+            size: 8
+        }
+    }
+});
+
 
   map.add(squashLayer);
 
