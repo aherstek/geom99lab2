@@ -44,7 +44,7 @@
   const faveparksLayer = new FeatureLayer({
     url: "https://services1.arcgis.com/pMeXRvgWClLJZr3s/arcgis/rest/services/some_of_our_fave_parks/FeatureServer/0",
     labelingInfo: [{
-      labelExpressionInfo: { expression: "$feature.Name" },
+      labelExpressionInfo: { expression: "$feature.Type" },
       symbol: {
         type: "text",
         color: "black",
