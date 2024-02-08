@@ -178,7 +178,7 @@ map.add(firstLayer);
       const squashLayer = new FeatureLayer({
     url: "https://services1.arcgis.com/pMeXRvgWClLJZr3s/arcgis/rest/services/our_go_to_squash_court/FeatureServer/0",
     labelingInfo: [{
-      labelExpressionInfo: { expression: "$feature.Name" },
+      labelExpressionInfo: { expression: "$feature.Type" },
       symbol: {
         type: "text",
         color: "black",
