@@ -37,7 +37,7 @@
     container: "viewDiv",
     map: map,
     center: [-114.066666,51.049999],
-    zoom: 11,
+    zoom: 9,
   });
 
 //parks feature layer (points)
@@ -53,10 +53,18 @@
         font: {
           size: 10,
           weight: "bold"
+         }
         }
-      }
-    }]
-  });
+    }],
+    renderer: {
+        type: "simple", // You can also use "unique-value" or "class-breaks" for more complex rendering
+        symbol: {
+            type: "simple-marker",
+            color: "green", // Change the color here
+            size: 8
+        }
+    }
+});
 
   map.add(faveparksLayer);
 
@@ -73,11 +81,18 @@
         font: {
           size: 10,
           weight: "bold"
+          }
         }
-      }
-    }]
-  });
-
+    }],
+    renderer: {
+        type: "simple", // You can also use "unique-value" or "class-breaks" for more complex rendering
+        symbol: {
+            type: "simple-marker",
+            color: "grey", // Change the color here
+            size: 8
+        }
+    }
+});
   map.add(bikeLayer, 0);
 
 // rollerblade (lines)
@@ -93,10 +108,18 @@
         font: {
           size: 10,
           weight: "bold"
+         }
         }
-      }
-    }]
-  });
+    }],
+    renderer: {
+        type: "simple", // You can also use "unique-value" or "class-breaks" for more complex rendering
+        symbol: {
+            type: "simple-marker",
+            color: "yellow", // Change the color here
+            size: 8
+        }
+    }
+});
 
   map.add(rollerLayer, 1);
 
@@ -112,11 +135,18 @@
         font: {
           size: 10,
           weight: "bold"
-        }
       }
-    }]
-  });
-
+        }
+    }],
+    renderer: {
+        type: "simple", // You can also use "unique-value" or "class-breaks" for more complex rendering
+        symbol: {
+            type: "simple-marker",
+            color: "orange", // Change the color here
+            size: 8
+        }
+    }
+});
   map.add(metLayer);
 
       const firstLayer = new FeatureLayer({
@@ -131,10 +161,18 @@
         font: {
           size: 10,
           weight: "bold"
-        }
       }
-    }]
-  });
+        }
+    }],
+    renderer: {
+        type: "simple", // You can also use "unique-value" or "class-breaks" for more complex rendering
+        symbol: {
+            type: "simple-marker",
+            color: "red", // Change the color here
+            size: 8
+        }
+    }
+});
 
   map.add(firstLayer);
 
@@ -150,10 +188,18 @@
         font: {
           size: 10,
           weight: "bold"
+           }
         }
-      }
-    }]
-  });
+    }],
+    renderer: {
+        type: "simple", // You can also use "unique-value" or "class-breaks" for more complex rendering
+        symbol: {
+            type: "simple-marker",
+            color: "pink", // Change the color here
+            size: 8
+        }
+    }
+});
 
   map.add(secondLayer);
 
