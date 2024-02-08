@@ -81,15 +81,6 @@
         font: {
           size: 10,
           weight: "bold"
-          }
-        }
-    }],
-    renderer: {
-        type: "simple", // You can also use "unique-value" or "class-breaks" for more complex rendering
-        symbol: {
-            type: "simple-marker",
-            color: "grey", // Change the color here
-            size: 8
         }
     }
 });
@@ -110,15 +101,6 @@
           weight: "bold"
          }
         }
-    }],
-    renderer: {
-        type: "simple", // You can also use "unique-value" or "class-breaks" for more complex rendering
-        symbol: {
-            type: "simple-marker",
-            color: "yellow", // Change the color here
-            size: 8
-        }
-    }
 });
 
   map.add(rollerLayer, 1);
@@ -140,12 +122,17 @@
     }],
     renderer: {
         type: "simple", // You can also use "unique-value" or "class-breaks" for more complex rendering
-        symbol: {
-            type: "simple-marker",
-            color: "orange", // Change the color here
-            size: 8
-        }
-    }
+           symbol: {
+              type: "text",
+              color: "<color>",
+              text: "<where we met>",
+              font: {
+                  size: "<font_size>",
+                  family: "<font_family>",
+                  weight: "<font_weight>"
+      }
+  }
+
 });
   map.add(metLayer);
 
