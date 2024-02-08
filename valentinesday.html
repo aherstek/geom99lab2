@@ -69,7 +69,7 @@
   const bikeLayer = new FeatureLayer({
     url: "https://services1.arcgis.com/pMeXRvgWClLJZr3s/arcgis/rest/services/our_go_to_bike_route/FeatureServer/0",
     labelingInfo: [{
-      labelExpressionInfo: { expression: "$feature.Name" },
+      labelExpressionInfo: { expression: "$feature.Type" },
       symbol: {
         type: "text",
         color: "black",
@@ -106,7 +106,7 @@
       const metLayer = new FeatureLayer({
     url: "https://services1.arcgis.com/pMeXRvgWClLJZr3s/arcgis/rest/services/where_we_met_/FeatureServer/0",
     labelingInfo: [{
-      labelExpressionInfo: { expression: "$feature.Name" },
+      labelExpressionInfo: { expression: "$feature.Type" },
       symbol: {
         type: "text",
         color: "black",
@@ -132,7 +132,7 @@
     const firstLayer = new FeatureLayer({
     url: "https://services1.arcgis.com/pMeXRvgWClLJZr3s/arcgis/rest/services/our_first_date/FeatureServer/0",
     labelingInfo: [{
-        labelExpressionInfo: { expression: "$feature.Name" },
+        labelExpressionInfo: { expression: "$feature.Type" },
         symbol: {
             type: "text",
             color: "black",
@@ -152,7 +152,7 @@ map.add(firstLayer);
       const secondLayer = new FeatureLayer({
     url: "https://services1.arcgis.com/pMeXRvgWClLJZr3s/arcgis/rest/services/second_date/FeatureServer/0",
     labelingInfo: [{
-      labelExpressionInfo: { expression: "$feature.Name" },
+      labelExpressionInfo: { expression: "$feature.Type" },
       symbol: {
         type: "text",
         color: "black",
