@@ -42,45 +42,136 @@
 
 //parks feature layer (points)
   const faveparksLayer = new FeatureLayer({
-    url: "https://services1.arcgis.com/pMeXRvgWClLJZr3s/arcgis/rest/services/some_of_our_fave_parks/FeatureServer/0"
+    url: "https://services1.arcgis.com/pMeXRvgWClLJZr3s/arcgis/rest/services/some_of_our_fave_parks/FeatureServer/0",
+    labelingInfo: [{
+      labelExpressionInfo: { expression: "$feature.Name" },
+      symbol: {
+        type: "text",
+        color: "black",
+        haloColor: "white",
+        haloSize: 1,
+        font: {
+          size: 10,
+          weight: "bold"
+        }
+      }
+    }]
   });
 
   map.add(faveparksLayer);
 
 //bike feature layer (lines)
   const bikeLayer = new FeatureLayer({
-    url: "https://services1.arcgis.com/pMeXRvgWClLJZr3s/arcgis/rest/services/our_go_to_bike_route/FeatureServer/0"
+    url: "https://services1.arcgis.com/pMeXRvgWClLJZr3s/arcgis/rest/services/our_go_to_bike_route/FeatureServer/0",
+    labelingInfo: [{
+      labelExpressionInfo: { expression: "$feature.Name" },
+      symbol: {
+        type: "text",
+        color: "black",
+        haloColor: "white",
+        haloSize: 1,
+        font: {
+          size: 10,
+          weight: "bold"
+        }
+      }
+    }]
   });
 
   map.add(bikeLayer, 0);
 
 // rollerblade (lines)
   const rollerLayer = new FeatureLayer({
-    url: "https://services1.arcgis.com/pMeXRvgWClLJZr3s/arcgis/rest/services/point_and_polyline_data/FeatureServer/1"
+    url: "https://services1.arcgis.com/pMeXRvgWClLJZr3s/arcgis/rest/services/point_and_polyline_data/FeatureServer/1",
+    labelingInfo: [{
+      labelExpressionInfo: { expression: "$feature.Name" },
+      symbol: {
+        type: "text",
+        color: "black",
+        haloColor: "white",
+        haloSize: 1,
+        font: {
+          size: 10,
+          weight: "bold"
+        }
+      }
+    }]
   });
 
   map.add(rollerLayer, 1);
 
       const metLayer = new FeatureLayer({
-    url: "https://services1.arcgis.com/pMeXRvgWClLJZr3s/arcgis/rest/services/where_we_met_/FeatureServer/0"
+    url: "https://services1.arcgis.com/pMeXRvgWClLJZr3s/arcgis/rest/services/where_we_met_/FeatureServer/0",
+    labelingInfo: [{
+      labelExpressionInfo: { expression: "$feature.Name" },
+      symbol: {
+        type: "text",
+        color: "black",
+        haloColor: "white",
+        haloSize: 1,
+        font: {
+          size: 10,
+          weight: "bold"
+        }
+      }
+    }]
   });
 
   map.add(metLayer);
 
       const firstLayer = new FeatureLayer({
-    url: "https://services1.arcgis.com/pMeXRvgWClLJZr3s/arcgis/rest/services/our_first_date/FeatureServer/0"
+    url: "https://services1.arcgis.com/pMeXRvgWClLJZr3s/arcgis/rest/services/our_first_date/FeatureServer/0",
+    labelingInfo: [{
+      labelExpressionInfo: { expression: "$feature.Name" },
+      symbol: {
+        type: "text",
+        color: "black",
+        haloColor: "white",
+        haloSize: 1,
+        font: {
+          size: 10,
+          weight: "bold"
+        }
+      }
+    }]
   });
 
   map.add(firstLayer);
 
       const secondLayer = new FeatureLayer({
-    url: "https://services1.arcgis.com/pMeXRvgWClLJZr3s/arcgis/rest/services/second_date/FeatureServer/0"
+    url: "https://services1.arcgis.com/pMeXRvgWClLJZr3s/arcgis/rest/services/second_date/FeatureServer/0",
+    labelingInfo: [{
+      labelExpressionInfo: { expression: "$feature.Name" },
+      symbol: {
+        type: "text",
+        color: "black",
+        haloColor: "white",
+        haloSize: 1,
+        font: {
+          size: 10,
+          weight: "bold"
+        }
+      }
+    }]
   });
 
   map.add(secondLayer);
 
       const squashLayer = new FeatureLayer({
-    url: "https://services1.arcgis.com/pMeXRvgWClLJZr3s/arcgis/rest/services/our_go_to_squash_court/FeatureServer/0"
+    url: "https://services1.arcgis.com/pMeXRvgWClLJZr3s/arcgis/rest/services/our_go_to_squash_court/FeatureServer/0",
+    labelingInfo: [{
+      labelExpressionInfo: { expression: "$feature.Name" },
+      symbol: {
+        type: "text",
+        color: "black",
+        haloColor: "white",
+        haloSize: 1,
+        font: {
+          size: 10,
+          weight: "bold"
+        }
+      }
+    }]
   });
 
   map.add(squashLayer);
