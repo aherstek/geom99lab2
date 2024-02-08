@@ -129,35 +129,25 @@
   });
   map.add(metLayer);
 
-      const firstLayer = new FeatureLayer({
+    const firstLayer = new FeatureLayer({
     url: "https://services1.arcgis.com/pMeXRvgWClLJZr3s/arcgis/rest/services/our_first_date/FeatureServer/0",
     labelingInfo: [{
-      labelExpressionInfo: { expression: "$feature.Name" },
-      symbol: {
-        type: "text",
-        color: "black",
-        haloColor: "white",
-        haloSize: 1,
-        font: {
-          size: 10,
-          weight: "bold"
-      }
-        }
-    }],
-    renderer: {
-        type: "simple", // You can also use "unique-value" or "class-breaks" for more complex rendering
+        labelExpressionInfo: { expression: "$feature.Name" },
         symbol: {
-    type: "text",
-    color: "<color>",
-    text: "<text_to_display>",
-    font: {
-        size: "<font_size>",
-        family: "<font_family>",
-        weight: "<font_weight>"
-    }
-}
+            type: "text",
+            color: "black",
+            haloColor: "white",
+            haloSize: 1,
+            font: {
+                size: 10,
+                weight: "bold"
+            }
+        }
+    }]
 });
-  map.add(firstLayer);
+
+map.add(firstLayer);
+
 
       const secondLayer = new FeatureLayer({
     url: "https://services1.arcgis.com/pMeXRvgWClLJZr3s/arcgis/rest/services/second_date/FeatureServer/0",
