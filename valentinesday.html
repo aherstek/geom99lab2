@@ -1,7 +1,4 @@
 <html>
-  <!-- tutorials used:
-        https://developers.arcgis.com/javascript/latest/tutorials/add-a-feature-layer/
-        https://developers.arcgis.com/javascript/latest/tutorials/style-a-feature-layer/ -->
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -82,8 +79,9 @@
           size: 10,
           weight: "bold"
         }
-    }
-});
+      }
+    }]
+  });
   map.add(bikeLayer, 0);
 
 // rollerblade (lines)
@@ -101,8 +99,8 @@
           weight: "bold"
          }
         }
-});
-
+    }]
+  });
   map.add(rollerLayer, 1);
 
       const metLayer = new FeatureLayer({
@@ -123,17 +121,12 @@
     renderer: {
         type: "simple", // You can also use "unique-value" or "class-breaks" for more complex rendering
            symbol: {
-              type: "text",
-              color: "<color>",
-              text: "<where we met>",
-              font: {
-                  size: "<font_size>",
-                  family: "<font_family>",
-                  weight: "<font_weight>"
+              type: "simple-marker",
+              color: "red", // Change the color here
+              size: 8
+          }
       }
-  }
-
-});
+  });
   map.add(metLayer);
 
       const firstLayer = new FeatureLayer({
@@ -160,7 +153,6 @@
         }
     }
 });
-
   map.add(firstLayer);
 
       const secondLayer = new FeatureLayer({
@@ -187,7 +179,6 @@
         }
     }
 });
-
   map.add(secondLayer);
 
       const squashLayer = new FeatureLayer({
@@ -214,12 +205,9 @@
         }
     }
 });
-
-
   map.add(squashLayer);
 
-
-  });
+});
 </script>
 
 </head>
