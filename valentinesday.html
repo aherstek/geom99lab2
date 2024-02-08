@@ -106,7 +106,7 @@
       const metLayer = new FeatureLayer({
     url: "https://services1.arcgis.com/pMeXRvgWClLJZr3s/arcgis/rest/services/where_we_met_/FeatureServer/0",
     labelingInfo: [{
-      labelExpressionInfo: { expression: "$feature.Type" },
+      labelExpressionInfo: { expression: "$feature.Name" },
       symbol: {
         type: "text",
         color: "black",
@@ -114,7 +114,6 @@
         haloSize: 1,
         font: {
           size: 10,
-          weight: "bold"
       }
         }
     }],
