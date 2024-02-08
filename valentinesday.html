@@ -147,11 +147,15 @@
     renderer: {
         type: "simple", // You can also use "unique-value" or "class-breaks" for more complex rendering
         symbol: {
-            type: "simple-marker",
-            color: "red", // Change the color here
-            size: 8
-        }
+    type: "text",
+    color: "<color>",
+    text: "<text_to_display>",
+    font: {
+        size: "<font_size>",
+        family: "<font_family>",
+        weight: "<font_weight>"
     }
+}
 });
   map.add(firstLayer);
 
