@@ -107,8 +107,8 @@
 //bike feature layer (lines)
  const bikeLineSymbol = {
   type: "simple-line",
-  color: "blue", // Change the color to blue
-  width: 2 // You can adjust the width of the line as needed
+  color: "blue", 
+  width: 2 
 };
 
 const bikeRenderer = {
@@ -118,7 +118,7 @@ const bikeRenderer = {
 
 const bikeLayer = new FeatureLayer({
   url: "https://services1.arcgis.com/pMeXRvgWClLJZr3s/arcgis/rest/services/our_go_to_bike_route/FeatureServer/0",
-  renderer: bikeRenderer // Apply the renderer to the layer
+  renderer: bikeRenderer 
 });
 
 map.add(bikeLayer, 0);
@@ -242,7 +242,7 @@ map.add(bikeLayer, 0);
 });
   map.add(squashLayer);
 
- // cretaing a widget for legend
+ // creating a widget for legend
       const legend = new Legend({
         view: view,
         container: "legendDiv"
