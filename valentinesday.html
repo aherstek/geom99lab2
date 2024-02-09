@@ -1,9 +1,10 @@
 <html>
 <!-- tutorials used:
-        https://developers.arcgis.com/javascript/latest/tutorials/add-a-feature-layer/
-        https://developers.arcgis.com/openlayers/maps/change-the-basemap-style/
-        https://developers.arcgis.com/javascript/latest/tutorials/style-a-feature-layer/ 
-        https://developers.arcgis.com/javascript/latest/arcade/#labeling
+        https://developers.arcgis.com/javascript/latest/tutorials/add-a-feature-layer/ - adding feature layers
+        https://developers.arcgis.com/openlayers/maps/change-the-basemap-style/ - changing basemap to grey
+        https://developers.arcgis.com/javascript/latest/tutorials/style-a-feature-layer/ - stylizing my feature layers
+        https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Legend.html - adding legend widget
+        https://developers.arcgis.com/javascript/latest/arcade/#labeling - learning about labelling
   -->
 <head>
   <meta charset="utf-8">
@@ -27,6 +28,16 @@
       font-size: 16px;
       text-align: center;
     }
+        #legendDiv {
+      position: absolute;
+      right: 20px;
+      bottom: 20px;
+      background-color: rgba(255, 255, 255, 0.7);
+      padding: 10px;
+      border-radius: 5px;
+      z-index: 1000;
+    }
+        
   </style>
   <link rel="stylesheet" href="https://js.arcgis.com/4.28/esri/themes/light/main.css">
   <script src="https://js.arcgis.com/4.28/"></script>
@@ -70,10 +81,10 @@
         }
     }],
     renderer: {
-        type: "simple", // You can also use "unique-value" or "class-breaks" for more complex rendering
+        type: "simple", 
         symbol: {
             type: "simple-marker",
-            color: "green", // Change the color here
+            color: "green", 
             size: 10,
         }
     }
@@ -132,7 +143,7 @@
         }
     }],
     renderer: {
-        type: "simple", // You can also use "unique-value" or "class-breaks" for more complex rendering
+        type: "simple",
            symbol: {
               type: "simple-marker",
               color: "pink", 
@@ -183,10 +194,10 @@
         }
     }],
     renderer: {
-        type: "simple", // You can also use "unique-value" or "class-breaks" for more complex rendering
+        type: "simple", 
         symbol: {
             type: "simple-marker",
-            color: "pink", // Change the color here
+            color: "pink",
             size: 10
         }
     }
@@ -208,18 +219,26 @@
         }
     }],
     renderer: {
-        type: "simple", // You can also use "unique-value" or "class-breaks" for more complex rendering
+        type: "simple", 
         symbol: {
             type: "simple-marker",
-            color: "pink", // Change the color here
+            color: "pink", 
             size: 10
         }
     }
 });
   map.add(squashLayer);
 
-});
-</script>
+ // cretaing a widget for legend
+      const legend = new Legend({
+        view: view,
+        container: "legendDiv"
+      });
+      
+      view.ui.add(legend, "bottom-right");
+
+    });
+  </script>
 
 </head>
 <body>
