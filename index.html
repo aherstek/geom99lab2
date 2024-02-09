@@ -1,4 +1,9 @@
 <html>
+  <!-- https://developers.arcgis.com/javascript/latest/tutorials/display-a-map/
+  https://developers.arcgis.com/javascript/latest/tutorials/add-a-point-line-and-polygon/
+  https://developers.arcgis.com/javascript/latest/tutorials/style-a-feature-layer/ &
+  https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-support-LabelClass.html
+  -->
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
@@ -25,7 +30,7 @@
      esriConfig.apiKey = "AAPK1821bf4645494d8cbcc6f63810c8ae77twI_0PubvKyzMAKSeKjWblZD1_iXDDXNx3Y5kRwO-yQyMgEf_XhulC9TcDt78n62";
 
         const map = new Map({
-          basemap: "arcgis/topographic" // basemap styles service
+          basemap: "arcgis-topographic" // basemap styles service
         });
 
         const view = new MapView({
