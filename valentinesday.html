@@ -60,8 +60,8 @@
       labelExpressionInfo: { expression: "$feature.Type" },
       symbol: {
         type: "text",
-        color: "green",
-        haloColor: "black",
+        color: "black",
+        haloColor: "white",
         haloSize: 1,
         font: {
           size: 10,
@@ -87,7 +87,7 @@
       labelExpressionInfo: { expression: "$feature.Type" },
       symbol: {
         type: "text",
-        color: "pink",
+        color: "black",
         haloColor: "white",
         haloSize: 1,
         font: {
@@ -105,7 +105,7 @@
       labelExpressionInfo: { expression: "$feature.Name" },
       symbol: {
         type: "text",
-        color: "pink",
+        color: "black",
         haloColor: "white",
         haloSize: 1,
         font: {
@@ -122,8 +122,8 @@
       labelExpressionInfo: { expression: "$feature.Name" },
       symbol: {
         type: "text",
-        color: "pink",
-        haloColor: "black",
+        color: "black",
+        haloColor: "white",
         haloSize: 1,
         font: {
           size: 10,
@@ -145,19 +145,26 @@
     url: "https://services1.arcgis.com/pMeXRvgWClLJZr3s/arcgis/rest/services/our_first_date/FeatureServer/0",
     labelingInfo: [{
         labelExpressionInfo: { expression: "$feature.Type" },
-        symbol: {
-            type: "text",
-            color: "pink",
-            haloColor: "black",
-            haloSize: 1,
-            font: {
-                size: 10,
-            }
+       symbol: {
+        type: "text",
+        color: "black",
+        haloColor: "white",
+        haloSize: 1,
+        font: {
+          size: 10,
+           }
         }
-    }]
+    }],
+    renderer: {
+        type: "simple", 
+        symbol: {
+            type: "simple-marker",
+            color: "pink",
+            size: 10
+        }
+    }
 });
-
-map.add(firstLayer);
+  map.add(firstLayer);
 
 
       const secondLayer = new FeatureLayer({
@@ -166,7 +173,7 @@ map.add(firstLayer);
       labelExpressionInfo: { expression: "$feature.Type" },
       symbol: {
         type: "text",
-        color: "pink",
+        color: "black",
         haloColor: "white",
         haloSize: 1,
         font: {
@@ -191,7 +198,7 @@ map.add(firstLayer);
       labelExpressionInfo: { expression: "$feature.Type" },
       symbol: {
         type: "text",
-        color: "pink",
+        color: "black",
         haloColor: "white",
         haloSize: 1,
         font: {
