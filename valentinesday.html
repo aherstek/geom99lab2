@@ -94,18 +94,23 @@
   map.add(faveparksLayer);
 
 //bike feature layer (lines)
-  const bikeLayer = new FeatureLayer({
-    url: "https://services1.arcgis.com/pMeXRvgWClLJZr3s/arcgis/rest/services/our_go_to_bike_route/FeatureServer/0",
-    labelingInfo: [{
-      labelExpressionInfo: { expression: "$feature.Type" },
-      symbol: {
-         type: "simple-line",
-          color: "blue", // Change the color to blue
-          width: 2 // You can adjust the width of the line as needed
-      }
-    }]
-  });
-  map.add(bikeLayer, 0);
+ const bikeLineSymbol = {
+  type: "simple-line",
+  color: "blue", // Change the color to blue
+  width: 2 // You can adjust the width of the line as needed
+};
+
+const bikeRenderer = {
+  type: "simple",
+  symbol: bikeLineSymbol
+};
+
+const bikeLayer = new FeatureLayer({
+  url: "https://services1.arcgis.com/pMeXRvgWClLJZr3s/arcgis/rest/services/our_go_to_bike_route/FeatureServer/0",
+  renderer: bikeRenderer // Apply the renderer to the layer
+});
+
+map.add(bikeLayer, 0);
 
 // rollerblade (lines)
   const rollerLayer = new FeatureLayer({
