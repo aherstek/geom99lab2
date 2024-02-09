@@ -63,6 +63,23 @@
  });
  graphicsLayer.add(pointGraphic);
 
+
+          // creating a LabelClass for the point feature
+  const labelClass = new LabelClass({
+    labelExpressionInfo: { expression: "$feature.label" }, // Use "$feature.label" to display the label
+    symbol: {
+      type: "text",
+      color: "black",
+      font: {
+        size: 12,
+        weight: "bold"
+      }
+    }
+  });
+
+  graphicsLayer.labelingInfo = [labelClass]; // Apply the label class to the graphics layer
+
+});
    // Create a line geometry
  const polyline = {
     type: "polyline",
