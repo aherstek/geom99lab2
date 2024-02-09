@@ -1,8 +1,9 @@
 <html>
-  <!-- https://developers.arcgis.com/javascript/latest/tutorials/display-a-map/
-  https://developers.arcgis.com/javascript/latest/tutorials/add-a-point-line-and-polygon/
+  <!-- https://developers.arcgis.com/javascript/latest/tutorials/display-a-map/ - 2d map
+  https://developers.arcgis.com/javascript/latest/tutorials/add-a-point-line-and-polygon/ - point, line, polygon
   https://developers.arcgis.com/javascript/latest/tutorials/style-a-feature-layer/ &
-  https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-support-LabelClass.html
+  https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-support-LabelClass.html - attempted to label
+  https://developers.arcgis.com/documentation/mapping-apis-and-services/maps/basemap-layers/ - changed the basemap
   -->
   <head>
     <meta charset="utf-8" />
@@ -29,7 +30,7 @@
         esriConfig.apiKey = "AAPK1821bf4645494d8cbcc6f63810c8ae77twI_0PubvKyzMAKSeKjWblZD1_iXDDXNx3Y5kRwO-yQyMgEf_XhulC9TcDt78n62";
 
         const map = new Map({
-          basemap: "arcgis-topographic" // basemap styles service
+          basemap: "satellite" // basemap styles service
         });
 
         const view = new MapView({
