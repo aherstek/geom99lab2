@@ -46,10 +46,10 @@
           type: "point",
           longitude: -118.80657463861,
           latitude: 34.0005930608889,
+          label: "Testing 1 2 3"
         };
 
-        point.attributes = {  // i tried a couple different ways to label stuff and got this to work at first, but not my lavbel won't show :( Feb 8/ @ 6pm          label: "Testing 1 2 3"
-        };
+       // i tried a couple different ways to label stuff and got this to work at first, but not my lavbel won't show :( Feb 8/ @ 6pm         
         
         const simpleMarkerSymbol = {
           type: "simple-marker",
@@ -69,7 +69,7 @@
 
         // creating a LabelClass for the point feature
         const labelClass = new LabelClass({
-          labelExpressionInfo: { expression: "$feature.label" }, // Use "$feature.label" to display the label
+          labelExpressionInfo: { expression: "$feature.label" }, // Using "$feature.label" to display my label
           symbol: {
             type: "text",
             color: "black",
