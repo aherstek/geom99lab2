@@ -24,7 +24,7 @@
     <script src="https://js.arcgis.com/4.28/"></script>
 
     <script>
-      require(["esri/config", "esri/Map", "esri/views/MapView", "esri/Graphic", "esri/layers/GraphicsLayer"], function(esriConfig, Map, MapView, Graphic, GraphicsLayer) {
+      require(["esri/config", "esri/Map", "esri/views/MapView", "esri/Graphic", "esri/layers/GraphicsLayer", "esri/layers/support/LabelClass"], function(esriConfig, Map, MapView, Graphic, GraphicsLayer) {
 
 
      esriConfig.apiKey = "AAPK1821bf4645494d8cbcc6f63810c8ae77twI_0PubvKyzMAKSeKjWblZD1_iXDDXNx3Y5kRwO-yQyMgEf_XhulC9TcDt78n62";
@@ -46,7 +46,8 @@
          const point = { //Create a point
     type: "point",
     longitude: -118.80657463861,
-    latitude: 34.0005930608889
+    latitude: 34.0005930608889,
+    label: "Point"
  };
  const simpleMarkerSymbol = {
     type: "simple-marker",
