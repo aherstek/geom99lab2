@@ -35,19 +35,19 @@
 
         const view = new MapView({
           map: map,
-          center: [-118.805, 34.027], // Longitude, latitude
+          center: [-118.805, 34.027],
           zoom: 13, // Zoom level
-          container: "viewDiv" // Div element
+          container: "viewDiv" // div element
         });
 
         const graphicsLayer = new GraphicsLayer();
          map.add(graphicsLayer);
 
-         const point = { //Create a point
-    type: "point",
-    longitude: -118.80657463861,
-    latitude: 34.0005930608889,
-    label: "Point"
+        const point = { //Create a point
+        type: "point",
+        longitude: -118.80657463861,
+        latitude: 34.0005930608889,
+        label: "Point"
  };
  const simpleMarkerSymbol = {
     type: "simple-marker",
@@ -58,7 +58,7 @@
     }
  };
 
-        const pointGraphic = new Graphic({
+    const pointGraphic = new Graphic({
     geometry: point,
     symbol: simpleMarkerSymbol
  });
