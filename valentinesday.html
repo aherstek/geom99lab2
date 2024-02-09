@@ -50,7 +50,7 @@
     container: "viewDiv",
     map: map,
     center: [-114.066666,51.049999],
-    zoom: 9,
+    zoom: 11,
   });
 
 //parks feature layer (points)
@@ -60,8 +60,8 @@
       labelExpressionInfo: { expression: "$feature.Type" },
       symbol: {
         type: "text",
-        color: "black",
-        haloColor: "white",
+        color: "green",
+        haloColor: "black",
         haloSize: 1,
         font: {
           size: 10,
@@ -73,7 +73,7 @@
         symbol: {
             type: "simple-marker",
             color: "green", // Change the color here
-            size: 8,
+            size: 10,
         }
     }
 });
@@ -87,7 +87,7 @@
       labelExpressionInfo: { expression: "$feature.Type" },
       symbol: {
         type: "text",
-        color: "black",
+        color: "pink",
         haloColor: "white",
         haloSize: 1,
         font: {
@@ -105,7 +105,7 @@
       labelExpressionInfo: { expression: "$feature.Name" },
       symbol: {
         type: "text",
-        color: "black",
+        color: "pink",
         haloColor: "white",
         haloSize: 1,
         font: {
@@ -122,8 +122,8 @@
       labelExpressionInfo: { expression: "$feature.Name" },
       symbol: {
         type: "text",
-        color: "black",
-        haloColor: "pink",
+        color: "pink",
+        haloColor: "black",
         haloSize: 1,
         font: {
           size: 10,
@@ -134,8 +134,8 @@
         type: "simple", // You can also use "unique-value" or "class-breaks" for more complex rendering
            symbol: {
               type: "simple-marker",
-              color: "red", // Change the color here
-              size: 8
+              color: "pink", 
+              size: 10
           }
       }
   });
@@ -147,8 +147,8 @@
         labelExpressionInfo: { expression: "$feature.Type" },
         symbol: {
             type: "text",
-            color: "black",
-            haloColor: "pink",
+            color: "pink",
+            haloColor: "black",
             haloSize: 1,
             font: {
                 size: 10,
@@ -166,12 +166,11 @@ map.add(firstLayer);
       labelExpressionInfo: { expression: "$feature.Type" },
       symbol: {
         type: "text",
-        color: "black",
+        color: "pink",
         haloColor: "white",
         haloSize: 1,
         font: {
           size: 10,
-          weight: "bold"
            }
         }
     }],
@@ -180,7 +179,7 @@ map.add(firstLayer);
         symbol: {
             type: "simple-marker",
             color: "pink", // Change the color here
-            size: 8
+            size: 10
         }
     }
 });
@@ -192,12 +191,11 @@ map.add(firstLayer);
       labelExpressionInfo: { expression: "$feature.Type" },
       symbol: {
         type: "text",
-        color: "black",
+        color: "pink",
         haloColor: "white",
         haloSize: 1,
         font: {
           size: 10,
-          weight: "bold"
           }
         }
     }],
@@ -205,8 +203,8 @@ map.add(firstLayer);
         type: "simple", // You can also use "unique-value" or "class-breaks" for more complex rendering
         symbol: {
             type: "simple-marker",
-            color: "blue", // Change the color here
-            size: 8
+            color: "pink", // Change the color here
+            size: 10
         }
     }
 });
